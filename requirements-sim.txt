@@ -1,0 +1,7 @@
+-r requirements.txt
+mujoco==3.17.0
+Pillow==13.0.0
+easyocr==1.7.2
+tqdm==4.70.1
+imageio==2.38.1
+imageio-ffmpeg==0.6.0

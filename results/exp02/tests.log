@@ -1,0 +1,19 @@
+test_boundary_mask (test_exp02.FeatureTests.test_boundary_mask) ... ok
+test_future_extra_observation_is_rejected (test_exp02.FeatureTests.test_future_extra_observation_is_rejected) ... ok
+test_no_truth_future_image_strategy_or_current_target_leakage (test_exp02.FeatureTests.test_no_truth_future_image_strategy_or_current_target_leakage) ... ok
+test_past_action_is_input_and_history_is_padded (test_exp02.FeatureTests.test_past_action_is_input_and_history_is_padded) ... ok
+test_complete_at_last_observation_is_stop_not_budget (test_exp02.ProtocolTests.test_complete_at_last_observation_is_stop_not_budget) ... ok
+test_training_is_blocked_after_test_started (test_exp02.ProtocolTests.test_training_is_blocked_after_test_started) ... ok
+test_two_linear_layers_only (test_exp02.ProtocolTests.test_two_linear_layers_only) ... ok
+test_saved_live_inputs_images_memory_and_actions (test_exp02.SavedRunAuditTests.test_saved_live_inputs_images_memory_and_actions) ... ok
+test_complete_wrong_and_budget_states_have_no_direction (test_exp02.TeacherTests.test_complete_wrong_and_budget_states_have_no_direction) ... ok
+test_invalid_geometry_is_not_a_teacher_path (test_exp02.TeacherTests.test_invalid_geometry_is_not_a_teacher_path) ... ok
+test_partial_misread_requires_conflict_and_two_new_confirmations (test_exp02.TeacherTests.test_partial_misread_requires_conflict_and_two_new_confirmations) ... ok
+test_starts_from_current_memory_instead_of_reset (test_exp02.TeacherTests.test_starts_from_current_memory_instead_of_reset) ... ok
+test_tie_has_soft_targets (test_exp02.TeacherTests.test_tie_has_soft_targets) ... ok
+test_wrong_complete_stop_cannot_be_repaired_by_oracle (test_exp02.TeacherTests.test_wrong_complete_stop_cannot_be_repaired_by_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.323s
+
+OK

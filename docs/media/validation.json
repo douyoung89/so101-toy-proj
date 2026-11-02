@@ -1,0 +1,13 @@
+{
+  "decoded_video": true,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 20.0,
+  "seconds": 15.25,
+  "frames": 305,
+  "model_selected_moves": 4,
+  "success": true,
+  "physics_hook_exact_state_test_passed": true
+}

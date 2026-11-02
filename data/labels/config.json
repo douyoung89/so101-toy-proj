@@ -1,0 +1,21 @@
+{
+  "seed": 20261029,
+  "condition": "protein_g >= 20 and sugar_g <= 5",
+  "protein_range_g": [
+    0,
+    40
+  ],
+  "sugar_range_g": [
+    0,
+    20
+  ],
+  "font": "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+  "image_size": [
+    512,
+    512
+  ],
+  "appearance": "Independent RNG for layout; black text, white background and constant brown object for every answer.",
+  "split_unit": "label_id; every derived view/lighting variant must inherit its label split",
+  "camera_fovy": 20,
+  "pilot_count": 10
+}

@@ -1,0 +1,60 @@
+{
+  "dataset": "$ORIGINAL_PROJECT/so101/data/partial_v1",
+  "development_only": true,
+  "seed": 20261102,
+  "architecture": {
+    "linear_layers": 2,
+    "hidden": 32,
+    "activation": "ReLU",
+    "outputs": [
+      "LEFT_5",
+      "RIGHT_5"
+    ]
+  },
+  "training": {
+    "epochs": 400,
+    "patience": 60,
+    "lr": 0.003,
+    "weight_decay": 0.001,
+    "batch": "full",
+    "device": "cpu",
+    "selection": "minimum val soft cross entropy; earliest epoch on tie"
+  },
+  "teacher": {
+    "mode": "current-memory budgeted BFS using table accepted OCR",
+    "success": "both values confirmed and equal to offline truth",
+    "ties": "equal probability soft targets, either shortest direction counts correct",
+    "wrong_ocr": "retain actual memory; simulate conflict repair; wrong complete memory STOPs and is excluded from direction training",
+    "unsolvable": "retain in excluded log; no direction invented",
+    "dedup": "same scene, quantized causal feature vector and teacher target collapsed; all source refs retained",
+    "reliability_gate": "100 percent accepted value/ambiguity agreement on train/val visits; pixel invariance not assumed"
+  },
+  "live_evaluation": {
+    "splits": [
+      "val",
+      "test"
+    ],
+    "methods": [
+      "mlp",
+      "left_first",
+      "right_first",
+      "random",
+      "fixed_sweep"
+    ],
+    "starts": "one existing sampled start per scene; common start and seed across methods"
+  },
+  "software": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "mujoco": "3.17.0",
+    "Pillow": "13.0.0",
+    "easyocr": "1.7.2"
+  },
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "training_data_sha256": {
+    "train": "92f41de82e0b07e8dbb5aa748f9f7cfbd56672a0cc5e1665dd7572554e2c4caa",
+    "val": "1fb109e9212a849a4384f6d7535dba084a9cd3fdd5badc66b6e4959880079910",
+    "test": "80426d3e065024d2acd24fa2be5151b37a7ed93e8c3623d8d3c388e828d36bc3"
+  }
+}

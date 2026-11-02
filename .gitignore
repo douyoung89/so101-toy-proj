@@ -1,0 +1,25 @@
+# Generated data and third-party downloads
+external/
+runtime/
+outputs/
+so101/data/
+so101/outputs/
+so101/experiments/**/runs/
+so101/experiments/**/demo/outputs/
+data/easyocr_models/
+stage2_assets/
+# Caches and local settings
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+# Keep the one historical validation log.
+!results/exp02/tests.log
+
+# Synthetic label images are shipped in a compact archive.
+/data/labels/images/

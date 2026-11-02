@@ -1,0 +1,11 @@
+{
+  "counts": {
+    "train": 284,
+    "val": 46,
+    "test": 20
+  },
+  "config_sha256": "787050f2dc75dda9cf00e7849824c9a41884a2e8e2b0ff7347a94e7287535cd1",
+  "semantics": "Behavior cloning of recorded actions; shortest strategy uses privileged planning only. Failures retained.",
+  "loader_contract": "Feed only input to model. metadata is for grouping/audit, target for supervision.",
+  "development_only": true
+}

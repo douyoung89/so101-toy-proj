@@ -1,0 +1,190 @@
+{
+  "thresholds": {
+    "protein_g": 0.7,
+    "sugar_g": 0.5
+  },
+  "selection_split": "val",
+  "validation_label_ids": [
+    "label_071",
+    "label_072",
+    "label_073",
+    "label_074",
+    "label_075",
+    "label_076",
+    "label_077",
+    "label_078",
+    "label_079",
+    "label_080",
+    "label_081",
+    "label_082",
+    "label_083",
+    "label_084",
+    "label_085"
+  ],
+  "validation_raw_sha256": "e5de9d0651307748b00ded6c14f05c178f4dc0d5a92ccbcb74c031baac1a6e37",
+  "labels_csv_sha256": "5ba4e025a4c90509a79a7f2b6e317c584edf66c14048e5e1de3c1605ecaf2c9b",
+  "rule": "zero observed validation field errors; maximize correct accepted fields; ties choose higher threshold",
+  "condition": "protein_g >= 20 AND sugar_g <= 5",
+  "conflict_rule": "invalidate; require two subsequent distinct matching observations to reconfirm",
+  "sweeps": {
+    "protein_g": [
+      {
+        "threshold": 0.0,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.1,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.3,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.5,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.7,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.8,
+        "correct": 10,
+        "wrong": 0,
+        "accepted": 10,
+        "frames": 45
+      },
+      {
+        "threshold": 0.9,
+        "correct": 9,
+        "wrong": 0,
+        "accepted": 9,
+        "frames": 45
+      },
+      {
+        "threshold": 0.95,
+        "correct": 7,
+        "wrong": 0,
+        "accepted": 7,
+        "frames": 45
+      },
+      {
+        "threshold": 0.98,
+        "correct": 6,
+        "wrong": 0,
+        "accepted": 6,
+        "frames": 45
+      },
+      {
+        "threshold": 0.99,
+        "correct": 5,
+        "wrong": 0,
+        "accepted": 5,
+        "frames": 45
+      },
+      {
+        "threshold": 1.01,
+        "correct": 0,
+        "wrong": 0,
+        "accepted": 0,
+        "frames": 45
+      }
+    ],
+    "sugar_g": [
+      {
+        "threshold": 0.0,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.1,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.3,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.5,
+        "correct": 15,
+        "wrong": 0,
+        "accepted": 15,
+        "frames": 45
+      },
+      {
+        "threshold": 0.7,
+        "correct": 12,
+        "wrong": 0,
+        "accepted": 12,
+        "frames": 45
+      },
+      {
+        "threshold": 0.8,
+        "correct": 12,
+        "wrong": 0,
+        "accepted": 12,
+        "frames": 45
+      },
+      {
+        "threshold": 0.9,
+        "correct": 8,
+        "wrong": 0,
+        "accepted": 8,
+        "frames": 45
+      },
+      {
+        "threshold": 0.95,
+        "correct": 8,
+        "wrong": 0,
+        "accepted": 8,
+        "frames": 45
+      },
+      {
+        "threshold": 0.98,
+        "correct": 6,
+        "wrong": 0,
+        "accepted": 6,
+        "frames": 45
+      },
+      {
+        "threshold": 0.99,
+        "correct": 6,
+        "wrong": 0,
+        "accepted": 6,
+        "frames": 45
+      },
+      {
+        "threshold": 1.01,
+        "correct": 0,
+        "wrong": 0,
+        "accepted": 0,
+        "frames": 45
+      }
+    ]
+  },
+  "locked_at_utc": "2026-10-29T07:02:48.845877+00:00"
+}

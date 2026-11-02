@@ -1,0 +1,26 @@
+{
+  "labels": 100,
+  "splits": {
+    "train": 70,
+    "val": 15,
+    "test": 15
+  },
+  "condition_counts": {
+    "train": {
+      "1": 35,
+      "0": 35
+    },
+    "val": {
+      "0": 8,
+      "1": 7
+    },
+    "test": {
+      "1": 8,
+      "0": 7
+    }
+  },
+  "overlapping_ids": 0,
+  "unique_answer_pairs": 100,
+  "observations_checked": 300,
+  "checks": "IDs, split inheritance lists, answer range/condition, image hashes, image size, uniqueness, observation split/answers"
+}

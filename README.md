@@ -76,6 +76,8 @@ mjpython scripts/project.py demo --viewer --hold --output runtime/my-demo
 
 창 없이 동영상을 만들려면 `python scripts/project.py demo --output runtime/my-video`를 실행합니다. macOS에서는 이 경우에도 그래픽 컨텍스트 접근이 필요합니다. `invalid CoreGraphics connection`이 나오면 화면 접근 가능한 로컬 터미널에서 실행하세요.
 
+합성 라벨 100장은 `data/labels/images.zip`에 묶었습니다. 설치 스크립트가 이를 로컬에 풉니다.
+
 설치 스크립트는 고정 커밋의 [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) 모델과 EasyOCR 영어 가중치를 별도로 다운로드합니다. 외부 모델·OCR 가중치는 이 저장소에 포함하지 않으며 다운로드 후 로컬 사용량은 증가합니다. 공개 데모는 val 장면만 사용하고 원래 평가 결과는 덮어쓰지 않습니다.
 
 ## 코드 읽는 순서

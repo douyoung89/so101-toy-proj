@@ -1,0 +1,34 @@
+{
+  "protein_g": 23,
+  "sugar_g": 14,
+  "label": {
+    "label_id": "label_074",
+    "protein_g": "23",
+    "sugar_g": "14",
+    "meets_condition": "0",
+    "split": "val",
+    "image": "images/label_074.png",
+    "font_size": "54",
+    "line_spacing": "115",
+    "offset_x": "-3",
+    "offset_y": "-7",
+    "alignment": "left",
+    "background_rgb": "255 255 255",
+    "object_rgb": "0.55 0.45 0.3",
+    "sha256": "ca943746449544cdd5216a0bbe89065738bdc38fd8a9ec56be2c57226946d7dc"
+  },
+  "settings": {
+    "center_y_m": -0.006427345150137554,
+    "half_size_m": [
+      0.028749100555469156,
+      0.005115251571774262,
+      0.0006
+    ],
+    "slope_m_per_rad": -0.022813329467570368,
+    "center_limits_y_m": [
+      -0.023413803127878483,
+      0.021246595321537005
+    ],
+    "coupling": "clipped center target updated before every physics step; soft equality servo"
+  }
+}

@@ -1,0 +1,140 @@
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 2, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 3, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 4, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 5, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 6, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 7, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000009", "step": 8, "label_id": "label_064", "status": "budget_exhausted"}
+{"scene_id": "scene_000001", "episode_id": "episode_000010", "step": 6, "label_id": "label_064", "status": "complete_correct"}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 2, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 3, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 4, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 5, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 6, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 7, "label_id": "label_064", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000001", "episode_id": "episode_000011", "step": 8, "label_id": "label_064", "status": "budget_exhausted"}
+{"scene_id": "scene_000001", "episode_id": "episode_000012", "step": 6, "label_id": "label_064", "status": "complete_correct"}
+{"scene_id": "scene_000002", "episode_id": "episode_000005", "step": 4, "label_id": "label_048", "status": "complete_correct"}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 3, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 4, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 5, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 6, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 7, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000006", "step": 8, "label_id": "label_048", "status": "budget_exhausted"}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 3, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 4, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 5, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 6, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 7, "label_id": "label_048", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000002", "episode_id": "episode_000007", "step": 8, "label_id": "label_048", "status": "budget_exhausted"}
+{"scene_id": "scene_000002", "episode_id": "episode_000008", "step": 4, "label_id": "label_048", "status": "complete_correct"}
+{"scene_id": "scene_000003", "episode_id": "episode_000029", "step": 4, "label_id": "label_010", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000003", "episode_id": "episode_000029", "step": 5, "label_id": "label_010", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000003", "episode_id": "episode_000029", "step": 6, "label_id": "label_010", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000003", "episode_id": "episode_000029", "step": 7, "label_id": "label_010", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000003", "episode_id": "episode_000029", "step": 8, "label_id": "label_010", "status": "budget_exhausted"}
+{"scene_id": "scene_000003", "episode_id": "episode_000030", "step": 1, "label_id": "label_010", "status": "complete_correct"}
+{"scene_id": "scene_000003", "episode_id": "episode_000031", "step": 3, "label_id": "label_010", "status": "complete_correct"}
+{"scene_id": "scene_000003", "episode_id": "episode_000032", "step": 1, "label_id": "label_010", "status": "complete_correct"}
+{"scene_id": "scene_000004", "episode_id": "episode_000049", "step": 4, "label_id": "label_061", "status": "complete_correct"}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 3, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 4, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 5, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 6, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 7, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000050", "step": 8, "label_id": "label_061", "status": "budget_exhausted"}
+{"scene_id": "scene_000004", "episode_id": "episode_000051", "step": 5, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000051", "step": 6, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000051", "step": 7, "label_id": "label_061", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000004", "episode_id": "episode_000051", "step": 8, "label_id": "label_061", "status": "budget_exhausted"}
+{"scene_id": "scene_000004", "episode_id": "episode_000052", "step": 4, "label_id": "label_061", "status": "complete_correct"}
+{"scene_id": "scene_000005", "episode_id": "episode_000033", "step": 1, "label_id": "label_002", "status": "complete_correct"}
+{"scene_id": "scene_000005", "episode_id": "episode_000034", "step": 1, "label_id": "label_002", "status": "complete_wrong"}
+{"scene_id": "scene_000005", "episode_id": "episode_000035", "step": 1, "label_id": "label_002", "status": "complete_correct"}
+{"scene_id": "scene_000005", "episode_id": "episode_000036", "step": 1, "label_id": "label_002", "status": "complete_correct"}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 3, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 4, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 5, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 6, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 7, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000041", "step": 8, "label_id": "label_004", "status": "budget_exhausted"}
+{"scene_id": "scene_000006", "episode_id": "episode_000042", "step": 3, "label_id": "label_004", "status": "complete_correct"}
+{"scene_id": "scene_000006", "episode_id": "episode_000043", "step": 5, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000043", "step": 6, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000043", "step": 7, "label_id": "label_004", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000006", "episode_id": "episode_000043", "step": 8, "label_id": "label_004", "status": "budget_exhausted"}
+{"scene_id": "scene_000006", "episode_id": "episode_000044", "step": 3, "label_id": "label_004", "status": "complete_correct"}
+{"scene_id": "scene_000007", "episode_id": "episode_000021", "step": 3, "label_id": "label_025", "status": "complete_correct"}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 3, "label_id": "label_025", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 4, "label_id": "label_025", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 5, "label_id": "label_025", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 6, "label_id": "label_025", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 7, "label_id": "label_025", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000007", "episode_id": "episode_000022", "step": 8, "label_id": "label_025", "status": "budget_exhausted"}
+{"scene_id": "scene_000007", "episode_id": "episode_000023", "step": 3, "label_id": "label_025", "status": "complete_correct"}
+{"scene_id": "scene_000007", "episode_id": "episode_000024", "step": 3, "label_id": "label_025", "status": "complete_correct"}
+{"scene_id": "scene_000011", "episode_id": "episode_000045", "step": 3, "label_id": "label_049", "status": "complete_correct"}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 3, "label_id": "label_049", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 4, "label_id": "label_049", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 5, "label_id": "label_049", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 6, "label_id": "label_049", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 7, "label_id": "label_049", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000011", "episode_id": "episode_000046", "step": 8, "label_id": "label_049", "status": "budget_exhausted"}
+{"scene_id": "scene_000011", "episode_id": "episode_000047", "step": 7, "label_id": "label_049", "status": "complete_correct"}
+{"scene_id": "scene_000011", "episode_id": "episode_000048", "step": 3, "label_id": "label_049", "status": "complete_correct"}
+{"scene_id": "scene_000012", "episode_id": "episode_000025", "step": 4, "label_id": "label_044", "status": "complete_correct"}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 3, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 4, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 5, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 6, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 7, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000026", "step": 8, "label_id": "label_044", "status": "budget_exhausted"}
+{"scene_id": "scene_000012", "episode_id": "episode_000027", "step": 5, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000027", "step": 6, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000027", "step": 7, "label_id": "label_044", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000012", "episode_id": "episode_000027", "step": 8, "label_id": "label_044", "status": "budget_exhausted"}
+{"scene_id": "scene_000012", "episode_id": "episode_000028", "step": 4, "label_id": "label_044", "status": "complete_correct"}
+{"scene_id": "scene_000013", "episode_id": "episode_000017", "step": 3, "label_id": "label_008", "status": "complete_correct"}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 3, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 4, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 5, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 6, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 7, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000018", "step": 8, "label_id": "label_008", "status": "budget_exhausted"}
+{"scene_id": "scene_000013", "episode_id": "episode_000019", "step": 5, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000019", "step": 6, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000019", "step": 7, "label_id": "label_008", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000013", "episode_id": "episode_000019", "step": 8, "label_id": "label_008", "status": "budget_exhausted"}
+{"scene_id": "scene_000013", "episode_id": "episode_000020", "step": 3, "label_id": "label_008", "status": "complete_correct"}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 3, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 4, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 5, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 6, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 7, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000037", "step": 8, "label_id": "label_056", "status": "budget_exhausted"}
+{"scene_id": "scene_000014", "episode_id": "episode_000038", "step": 4, "label_id": "label_056", "status": "complete_correct"}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 3, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 4, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 5, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 6, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 7, "label_id": "label_056", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000014", "episode_id": "episode_000039", "step": 8, "label_id": "label_056", "status": "budget_exhausted"}
+{"scene_id": "scene_000014", "episode_id": "episode_000040", "step": 4, "label_id": "label_056", "status": "complete_correct"}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 1, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 2, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 3, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 4, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 5, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 6, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 7, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000013", "step": 8, "label_id": "label_005", "status": "budget_exhausted"}
+{"scene_id": "scene_000015", "episode_id": "episode_000014", "step": 8, "label_id": "label_005", "status": "complete_correct"}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 1, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 2, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 3, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 4, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 5, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 6, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 7, "label_id": "label_005", "status": "unsolvable", "distances": [null, null], "partial_wrong": false}
+{"scene_id": "scene_000015", "episode_id": "episode_000015", "step": 8, "label_id": "label_005", "status": "budget_exhausted"}
+{"scene_id": "scene_000015", "episode_id": "episode_000016", "step": 8, "label_id": "label_005", "status": "complete_correct"}
