@@ -4,9 +4,9 @@
 
 MuJoCo의 SO-101 로봇 손목을 5°씩 움직여, 서로 다른 시점에서 읽은 **단백질·당류 정보를 OCR 기억에 누적**합니다. 두 값을 모두 확인하면 멈추며, 최대 이동 예산은 8회입니다. 데이터 수집부터 최단 경로 교사 라벨, 작은 MLP 학습, 실제 시뮬레이션 이동과 새 OCR을 이용한 비교 평가까지 구현했습니다.
 
-[![학습 정책 시연](docs/media/preview.png)](docs/media/policy-motion.mp4)
+![학습 정책 시연 — 손목 이동과 OCR 기억 갱신](docs/media/policy-motion.gif)
 
-▶ **[데모 영상 보기 · MP4, 15.25초, 약 0.50MB](https://github.com/douyoung89/so101-toy-proj/raw/refs/heads/main/docs/media/policy-motion.mp4)** · [종료 화면](docs/media/last-frame.png) · [관측·행동 기록](docs/media/trace.json)
+README에서 바로 반복 재생되는 GIF입니다(960×540, 10fps, 약 2.2MB). [고화질 MP4 원본](docs/media/policy-motion.mp4) · [종료 화면](docs/media/last-frame.png) · [관측·행동 기록](docs/media/trace.json)
 
 왼쪽은 라벨 카메라, 오른쪽 위는 로봇 전체 시점, 오른쪽 아래는 모델 방향·손목각·OCR 기억입니다. 검증 장면에서 −20° → −15° → −10° → −5° → 0°로 이동하며 단백질 23g·당류 14g을 확보했습니다. 저장된 데모는 학습 체크포인트가 행동을 선택하고 매번 새 영상으로 OCR한 실행입니다.
 

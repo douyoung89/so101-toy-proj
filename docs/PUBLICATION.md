@@ -10,7 +10,7 @@
 | 고정 v2_005 장면과 OCR 임계값 | `assets/reference/` |
 | train/val/test 특징·제외 로그·체크포인트 | `results/exp02/` |
 | 새 영상 온라인 평가 15건의 텍스트 기록 | `results/exp02/evaluation/` |
-| val scene_000008 시연 | `docs/media/`와 `assets/demo/` |
+| val scene_000008 시연 | `docs/media/`의 인라인 GIF·원본 MP4와 `assets/demo/` |
 | 원래 100개 합성 라벨 | `data/labels/images.zip`과 CSV |
 
 ## 제외한 자료
