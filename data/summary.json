@@ -1,0 +1,892 @@
+{
+  "train": {
+    "samples": 81,
+    "labels": 12,
+    "states": {
+      "unique": 163,
+      "complete_correct": 28,
+      "merged_duplicates": 82,
+      "unsolvable": 92,
+      "budget_exhausted": 19,
+      "complete_wrong": 1
+    },
+    "excluded": [
+      {
+        "episode": "episode_000005",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000006",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000007",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000008",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 2,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000009",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000010",
+        "step": 6,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 2,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000011",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000012",
+        "step": 6,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 1,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 2,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000013",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000014",
+        "step": 8,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 1,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 2,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000015",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000016",
+        "step": 8,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000017",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000018",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000019",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000019",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000019",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000019",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000020",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000021",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000022",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000023",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000024",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000025",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000026",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000027",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000027",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000027",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000027",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000028",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000029",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000029",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000029",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000029",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000029",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000030",
+        "step": 1,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000031",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000032",
+        "step": 1,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000033",
+        "step": 1,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000034",
+        "step": 1,
+        "reason": "complete_wrong"
+      },
+      {
+        "episode": "episode_000035",
+        "step": 1,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000036",
+        "step": 1,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000037",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000038",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000039",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000040",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000041",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000042",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000043",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000043",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000043",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000043",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000044",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000045",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000046",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000047",
+        "step": 7,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000048",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000049",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000050",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000051",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000051",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000051",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000051",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000052",
+        "step": 4,
+        "reason": "complete_correct"
+      }
+    ]
+  },
+  "val": {
+    "samples": 14,
+    "labels": 2,
+    "states": {
+      "unique": 28,
+      "unsolvable": 13,
+      "budget_exhausted": 3,
+      "merged_duplicates": 14,
+      "complete_correct": 5
+    },
+    "excluded": [
+      {
+        "episode": "episode_000053",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000053",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000053",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000053",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000053",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000053",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000054",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000055",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000055",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000055",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000055",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000056",
+        "step": 4,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000057",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000058",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000059",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000060",
+        "step": 3,
+        "reason": "complete_correct"
+      }
+    ]
+  },
+  "test": {
+    "samples": 5,
+    "labels": 1,
+    "states": {
+      "unique": 12,
+      "unsolvable": 5,
+      "budget_exhausted": 1,
+      "merged_duplicates": 7,
+      "complete_correct": 3
+    },
+    "excluded": [
+      {
+        "episode": "episode_000001",
+        "step": 3,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000001",
+        "step": 4,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000001",
+        "step": 5,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000001",
+        "step": 6,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000001",
+        "step": 7,
+        "reason": "unsolvable"
+      },
+      {
+        "episode": "episode_000001",
+        "step": 8,
+        "reason": "budget_exhausted"
+      },
+      {
+        "episode": "episode_000002",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000003",
+        "step": 3,
+        "reason": "complete_correct"
+      },
+      {
+        "episode": "episode_000004",
+        "step": 3,
+        "reason": "complete_correct"
+      }
+    ]
+  }
+}

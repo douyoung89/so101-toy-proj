@@ -1,0 +1,25 @@
+{
+  "source": "Original local SO-101 collection: 15 scenes and 60 episodes",
+  "splits": {
+    "train": {
+      "scenes": 12,
+      "episodes": 48,
+      "observations": 303
+    },
+    "val": {
+      "scenes": 2,
+      "episodes": 8,
+      "observations": 49
+    },
+    "test": {
+      "scenes": 1,
+      "episodes": 4,
+      "observations": 21
+    }
+  },
+  "referenced_images": 718,
+  "unique_images": 356,
+  "image_bytes_before_sharing": 90554869,
+  "image_bytes_after_sharing": 44641495,
+  "image_policy": "Original-resolution PNGs. Exact duplicates share paths. 224x224 derivatives are omitted."
+}

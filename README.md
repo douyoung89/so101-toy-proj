@@ -1,115 +1,139 @@
-# SO-101 Active Label Reading
+# SO-101: 읽기 쉬운 방향 정책 학습 실험
 
-**가려진 영양성분을 읽기 위해 로봇의 다음 시점을 고르는 토이 프로젝트.**
+가려진 영양성분을 읽기 위해 손목을 좌우 5°씩 움직입니다. OCR로 읽은 정보를 기억하고, 작은 MLP가 다음 방향을 선택합니다. 두 값이 모두 확인되면 기억 규칙이 STOP을 결정합니다.
 
-MuJoCo의 SO-101 로봇 손목을 5°씩 움직여, 서로 다른 시점에서 읽은 **단백질·당류 정보를 OCR 기억에 누적**합니다. 두 값을 모두 확인하면 멈추며, 최대 이동 예산은 8회입니다. 데이터 수집부터 최단 경로 교사 라벨, 작은 MLP 학습, 실제 시뮬레이션 이동과 새 OCR을 이용한 비교 평가까지 구현했습니다.
+![새로 학습한 모델의 실제 MuJoCo 시연](results/demo.gif)
 
-![학습 정책 시연 — 손목 이동과 OCR 기억 갱신](docs/media/policy-motion.gif)
+## 실행
 
-README에서 바로 반복 재생되는 GIF입니다(960×540, 10fps, 약 2.2MB). [고화질 MP4 원본](docs/media/policy-motion.mp4) · [종료 화면](docs/media/last-frame.png) · [관측·행동 기록](docs/media/trace.json)
-
-왼쪽은 라벨 카메라, 오른쪽 위는 로봇 전체 시점, 오른쪽 아래는 모델 방향·손목각·OCR 기억입니다. 검증 장면에서 −20° → −15° → −10° → −5° → 0°로 이동하며 단백질 23g·당류 14g을 확보했습니다. 저장된 데모는 학습 체크포인트가 행동을 선택하고 매번 새 영상으로 OCR한 실행입니다.
-
-## 어떻게 동작하나요?
-
-```mermaid
-flowchart LR
-    A[카메라 촬영] --> B[EasyOCR]
-    B --> C[누적 정보 기억]
-    C --> D{두 값 모두 확인?}
-    D -->|예| E[STOP 규칙]
-    D -->|아니요| F[77차원 상태 → MLP]
-    F --> G[왼쪽 또는 오른쪽 5°]
-    G --> H[안전 범위 확인과 물리 이동]
-    H --> A
-```
-
-- **기억:** 보이지 않는 값도 이전 관측에서 읽었다면 유지합니다. 상충하는 OCR 값은 재확인을 거칩니다.
-- **교사:** 관측표와 실제 누적 기억에서 예산 안에 두 정답을 얻는 최단 경로를 BFS로 계산합니다. 미래 OCR과 정답은 교사 생성·사후 감사에만 사용합니다.
-- **모델:** `77 → 32 → 2` MLP, 파라미터 2,562개. 현재 손목각, 기억 상태·신뢰도, 과거 방문·행동, 남은 예산을 사용합니다. **이미지와 OCR 숫자값은 모델 입력이 아닙니다.**
-- **종료:** MLP는 좌우 방향만 선택합니다. STOP은 기존 기억 규칙이 처리하므로 OCR 오독에 따른 잘못된 종료도 가능합니다.
-
-## 확인한 결과와 한계
-
-| 항목 | 개발 파일럿 결과 |
-|---|---|
-| 수집 | 장면 15개 · 각도 관측 345건 · 에피소드 60개 |
-| 재라벨·중복 병합 후 상태 | train 81 / val 14 / test 5 |
-| 교사 최적 방향 분류 정확도 | 각 분할 100% |
-| 새 영상으로 온라인 MLP 평가 | val 2/2 성공, 평균 3.5회 이동 · test 1/1 성공, 3회 이동 |
-| 우측 우선 규칙과 비교 | 같은 성공률·이동 횟수 |
-
-**이는 개발 과정의 소규모 실험입니다.** val/test 교사 방향이 모두 오른쪽이어서 분류 정확도 100%만으로 양방향 일반화를 주장할 수 없습니다. 온라인 test는 한 장면의 한 시작점이며, 라벨도 이전 개발에 사용했습니다. 새 라벨 일반화·규칙 대비 우위·OCR 오독 내성은 입증하지 못했습니다. 실물 로봇 검증은 포함하지 않습니다.
-
-자세한 수치와 실패 사례는 [실험 보고서](results/exp02/REPORT.md), [평가 JSON](results/exp02/evaluation_report.json), [데이터 수집 보고서](so101/PILOT_REPORT.md)를 참고하세요.
-
-## 빠르게 확인하기 — 로봇 모델 다운로드 없이
-
-Python 3.12에서 저장된 체크포인트와 작은 특징 데이터만 사용합니다. 아래 명령은 저장된 test 상태의 분류 결과를 확인하며 새 온라인 test를 실행하지 않습니다.
+**Conda `so101` 환경, Python 3.12.0**에서 실행한 실험입니다. 학습 데이터와 원본 관측 이미지는 저장소에 포함되어 있습니다.
 
 ```bash
-git clone https://github.com/douyoung89/so101-toy-proj.git
-cd so101-toy-proj
-python -m venv .venv
-source .venv/bin/activate
+conda activate so101
+./run_experiment.sh
+```
+
+스크립트 하나로 다음을 실행합니다.
+
+1. 압축된 원본 관측 이미지·로봇 mesh·합성 라벨을 풀고, 없으면 OCR 가중치를 다운로드합니다.
+2. 에피소드와 관측표에서 방향 교사 정답과 77차원 학습 입력을 만듭니다.
+3. 새로 초기화한 모델을 학습하고, val 손실이 가장 작은 가중치를 저장합니다.
+4. val/test 장면에서 모델과 비교 규칙을 실제 MuJoCo 이동·새 촬영·새 OCR로 평가합니다.
+5. 새 체크포인트로 val 시연 GIF를 만듭니다.
+
+재실행하면 `results/`의 파일을 덮어씁니다. 해시 검사나 수정 잠금은 없습니다. 일반 macOS 터미널에서 실행하세요. `invalid CoreGraphics connection`은 해당 실행 환경의 그래픽 접근 문제입니다.
+
+처음 환경을 만드는 경우 먼저 실행합니다. 기존 `so101` 환경이 있으면 생략합니다.
+
+```bash
+conda create -n so101 python=3.12
+conda activate so101
 python -m pip install -r requirements.txt
-python scripts/project.py verify
 ```
 
-train/val 특징으로 동일한 학습 코드를 다시 실행하려면:
+스크립트는 활성화한 환경의 `python`을 사용합니다. `PYTHON=/path/to/python ./run_experiment.sh`로 직접 지정할 수도 있습니다. 첫 실행의 OCR 가중치 다운로드에는 인터넷이 필요합니다.
+
+빠른 관측표 재생 평가도 가능합니다.
 
 ```bash
-python scripts/project.py train --output runtime/my-training
+python evaluate.py --mode replay
 ```
 
-새 출력 폴더를 사용합니다. train만으로 정규화하고 val 손실로 체크포인트를 선택합니다. 이 명령은 원본 이미지 감사나 교사 재생성을 수행하지 않습니다. 준비된 특징을 사용한 학습 재현입니다.
+이 명령은 CSV 평가 결과를 덮어씁니다. `replay`는 저장된 OCR 관측표를 사용하며, 기본 실행의 `live` 평가와 구분해야 합니다. 다시 `./run_experiment.sh`를 실행하면 새 live 결과가 생성됩니다.
 
-## MuJoCo에서 직접 데모 실행하기
+## 파일 구조와 읽는 순서
 
-촬영은 macOS의 그래픽 접근 가능한 터미널에서 검증한 흐름입니다. 다른 OS의 렌더링은 별도 검증하지 않았습니다.
-
-```bash
-python -m pip install -r requirements-sim.txt
-python scripts/setup_assets.py --ocr
-mjpython scripts/project.py demo --viewer --hold --output runtime/my-demo
+```text
+so101-simple/
+  dataset.py                 # 데이터 읽기, 77차원 입력 구성
+  model.py                   # 77 -> 32 -> 2 MLP와 행동 선택
+  train.py                   # 학습, val 선택, best_model.pt 저장
+  evaluate.py                # 분류·온라인 평가, CSV 표 저장
+  demo.py                    # 새 체크포인트로 시연 GIF 생성
+  config.json                # seed, 학습률, epoch 등 수정할 설정
+  requirements.txt           # 실제 so101 환경의 pip freeze 목록
+  run_experiment.sh          # 전체 실험 실행
+  data/
+    images/                  # 원본 PNG 압축 묶음; 실행 시 이곳에 자동 해제
+    train/episode_*.json      # train 에피소드
+    val/episode_*.json        # val 에피소드
+    test/episode_*.json       # test 에피소드
+    train/samples.jsonl       # train의 가공된 모델 입력·교사 정답
+    val/samples.jsonl
+    test/samples.jsonl
+    scenes.json              # 장면 설정, 정답, 각도별 OCR 관측표
+    source.json              # 원자료 위치와 이미지 공유 통계
+    summary.json             # 입력 수와 제외 사유
+  simulation/
+    environment.py           # 로봇 이동 -> 렌더링 -> OCR
+    memory.py                # OCR 파싱, 누적 기억, 충돌 재확인
+    geometry.py              # 화면 범위·침투·접촉 검사
+    assets/                  # 기준 XML, 라벨·mesh·OCR 가중치
+  scripts/
+    import_data.py           # 다른 원자료를 위 data 구조로 가져오기
+    setup_assets.py          # mesh·라벨 압축 해제와 OCR 가중치 준비
+    prepare_data.py          # BFS 교사 정답 생성
+  results/                   # 모델별 중첩 폴더 없이 결과 파일로 모음
+  tests/test_pipeline.py     # 인과 입력·기억·교사·종료 동작 테스트
 ```
 
-창 없이 동영상을 만들려면 `python scripts/project.py demo --output runtime/my-video`를 실행합니다. macOS에서는 이 경우에도 그래픽 컨텍스트 접근이 필요합니다. `invalid CoreGraphics connection`이 나오면 화면 접근 가능한 로컬 터미널에서 실행하세요.
+처음 읽는다면 **`evaluate.py:run_episode()` → `dataset.py:encode_history()` → `model.py` → `train.py` → `scripts/prepare_data.py`** 순서가 좋습니다. 물리 이동이 궁금할 때 `simulation/environment.py`로 내려갑니다.
 
-합성 라벨 100장은 `data/labels/images.zip`에 묶었습니다. 설치 스크립트가 이를 로컬에 풉니다.
+## 데이터의 의미
 
-설치 스크립트는 고정 커밋의 [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) 모델과 EasyOCR 영어 가중치를 별도로 다운로드합니다. 외부 모델·OCR 가중치는 이 저장소에 포함하지 않으며 다운로드 후 로컬 사용량은 증가합니다. 공개 데모는 val 장면만 사용하고 원래 평가 결과는 덮어쓰지 않습니다.
+기존 로컬 SO-101 수집 실험의 원자료를 사용합니다. 관측표와 수집 에피소드를 새로 촬영한 실험은 아닙니다. 이번 작업에서는 원자료를 정리하고, 교사 정답을 다시 구성하고, 모델을 새로 학습하고, 온라인 평가와 데모를 새로 실행합니다.
 
-## 코드 읽는 순서
+원자료는 15개 장면, 345개 각도 관측, 60개 에피소드입니다. train/val/test는 라벨 단위로 12/2/1개 장면이며, 에피소드는 48/8/4개입니다. 재라벨·중복 상태 병합 후 학습 입력은 81/14/5개입니다.
 
-| 위치 | 역할 |
+한 에피소드는 **동일 장면에서 손목각을 바꾸며 관측한 순서**입니다. `data/train/episode_000005.json` 같은 파일의 `observations` 배열에서 시간 순서를 읽습니다.
+
+```json
+{
+  "episode_id": "example",
+  "scene_id": "scene_000001",
+  "observations": [
+    {"step": 0, "image": "data/images/frame_000001.png", "wrist_deg": 0, "action": "RIGHT_5"},
+    {"step": 1, "image": "data/images/frame_000002.png", "wrist_deg": 5, "action": "STOP"}
+  ]
+}
+```
+
+위 JSON은 구조를 설명하는 예시입니다. 실제 파일에는 OCR, 누적 기억, 관절 상태와 도착 시 이동 정보도 있습니다. 경로는 프로젝트 루트 기준입니다. `action`은 해당 관측 뒤에 선택한 행동이고, 예산 소진 등의 무행동 종료는 `null`입니다.
+
+이미지 참조 718개를 356개 원본 PNG로 공유해 약 90.6MB에서 44.6MB로 줄였습니다. 바이트가 완전히 같은 이미지 파일만 공유합니다. **관측 단계와 관측 ID는 별도로 유지**하므로 같은 경로를 참조해도 시간·기억 기록이 합쳐지지 않습니다. 원본 이미지를 보존하고 재생성 가능한 224×224 파생 이미지는 제외했습니다.
+
+`data/scenes.json`의 실제 정답·미래 관측표는 교사 생성과 사후 평가에 사용합니다. `dataset.py`가 모델에 제공하는 입력에는 이미지, OCR 숫자값, 실제 정답, 미래 관측, 장면 ID, 수집 전략이 없습니다.
+
+## 학습과 결과
+
+고정 seed는 `config.json`에서 바꿉니다. 77차원 상태에서 LEFT_5/RIGHT_5를 예측하는 지도학습입니다. STOP과 관절 위치 제어는 학습 대상이 아닙니다. 정규화 통계는 train에서 계산하고, 최적 epoch는 val 손실로 선택합니다. `train.py`는 test를 읽지 않습니다.
+
+| 결과 파일 | 내용 |
 |---|---|
-| [`so101/ocr_memory.py`](so101/ocr_memory.py) | OCR 파싱, 누적 기억과 충돌·재확인 |
-| [`so101/simulator.py`](so101/simulator.py) | MuJoCo 이동, 촬영·OCR, 안전 검사 연결 |
-| [`so101/partial_scene.py`](so101/partial_scene.py) | 재현 가능한 장면 생성과 각도별 수집 |
-| [`so101/check_partial_scene.py`](so101/check_partial_scene.py), [`collect_partial.py`](so101/collect_partial.py) | 시작점 검수·최단 탐색·실제 에피소드 수집 |
-| [`core.py`](so101/experiments/exp02_structured/core.py) | 77차원 특징과 BFS 방향 교사 |
-| [`model.py`](so101/experiments/exp02_structured/model.py), [`train.py`](so101/experiments/exp02_structured/train.py) | MLP·학습·선택 잠금 |
-| [`evaluate.py`](so101/experiments/exp02_structured/evaluate.py) | 새 촬영을 사용하는 온라인 기준 정책 비교 |
-| [`scripts/`](scripts) | 공개 사본 검증·학습·데모·외부 자산 준비 |
-| [`support/`](support) | 초기 실험에서 재사용한 기하·관절·OCR·접촉 검사 함수 |
-| [`assets/`](assets), [`data/labels/`](data/labels) | 기준 XML·OCR 임계값·시연 설정·소형 합성 라벨 |
-| [`results/`](results), [`docs/media/`](docs/media) | 선별한 과거 결과와 대표 영상 |
+| `results/best_model.pt` | 선택한 새 모델의 가중치·정규화 통계·학습 설정 |
+| `results/training.csv` | epoch별 train/val 손실·val 정확도 |
+| `results/training_summary.json` | 선택 epoch, 파라미터 수, 학습 시간 |
+| `results/classification.csv` | train/val/test 방향 분류와 항상 오른쪽 규칙 비교 |
+| `results/metrics.csv` | val/test의 정책별 성공률·이동량·잘못된 STOP·기술 오류 |
+| `results/episodes.csv` | 개별 평가 에피소드의 결과 |
+| `results/evaluation.jsonl` | 새 온라인 평가의 전체 관측·행동 기록 |
+| `results/report.md` | 결과 표와 해석 범위 |
+| `results/demo.gif`, `results/demo.json` | 새 모델의 val 시연과 상세 기록 |
 
-새 데이터 수집과 전체 실험 순서는 [파이프라인 안내](so101/README.md), 설계는 [DESIGN](so101/DESIGN.md)을 참고하세요. 공개 사본의 구성·제외 기준은 [배포 안내](docs/PUBLICATION.md)에 정리했습니다.
+기존에 개발에 사용한 라벨이며 test가 한 장면뿐입니다. val/test 교사 방향도 모두 오른쪽입니다. 정확도 100% 또는 test 성공 1/1을 새로운 라벨 일반화나 규칙 대비 우위로 해석하면 안 됩니다. 자세한 실제 결과는 [실험 보고서](results/report.md)를 참고하세요.
 
-## 용량 관리와 검증
+## 환경과 로컬 자산
 
-전체 원본은 이 저장소에 올리지 않습니다. 소스·소형 라벨·특징 데이터·체크포인트·평가 텍스트·대표 MP4만 선별했습니다. 대량 관측 PNG, 거절 후보 전체, 외부 로봇 저장소, OCR 가중치, 중복 run과 캐시는 `.gitignore`로 제외합니다. 과거 평가 JSON이 가리키는 원본 프레임은 이 축약본에 없습니다.
+`requirements.txt`는 실험에 사용한 `so101` 환경에서 `python -m pip freeze`로 추출한 46개 패키지 목록입니다. 같은 Python 3.12 환경에 설치할 때 사용할 수 있습니다. 이번 작업에서는 기존 환경을 그대로 사용했고, 별도 새 환경에 대한 재설치는 하지 않았습니다.
+
+기준 XML, 정확히 사용한 로봇 mesh의 `meshes.zip`, 합성 라벨 15장의 `labels.zip`을 포함했습니다. 실행 스크립트가 자동으로 압축을 풉니다. 약 94MB의 EasyOCR 가중치는 Git에 포함하지 않고 첫 실행 때 내려받습니다. 이전 프로젝트의 Python 코드나 개인 컴퓨터 경로는 필요하지 않습니다.
+
+에피소드가 참조하는 원본 PNG 356장은 `data/images/images_01.zip`부터 `images_08.zip`까지 작은 압축 묶음으로 모두 포함했습니다. GitHub API의 단일 전송 크기 제한 때문에 나누었으며, 처음 실행하면 동일한 `data/images/` 폴더에 원본 PNG가 자동으로 풀립니다. [이미지 안내](data/images/README.md)를 참고하세요. 이미지 공유 후 원자료 이미지 용량은 약 44.6MB이고 전체 공개 파일은 약 58MB 규모입니다.
+
+이미 포함된 데이터를 쓸 때 원자료 가져오기는 필요하지 않습니다. 다른 로컬 수집 데이터를 정리하려면 `python scripts/import_data.py --source /path/to/original/data`를 사용합니다. 이 명령은 데이터 파일을 다시 만듭니다.
+
+로봇 모델 출처는 TheRobotStudio/SO-ARM100이며 기준 XML에 라벨·hood·가림판·카메라를 추가한 수정본입니다. Apache 2.0 라이선스는 `simulation/assets/ROBOT_LICENSE.txt`에 포함했습니다.
 
 ```bash
-python -m unittest discover -s so101/experiments/exp02_structured/tests -v
-# 아래 수집·물리 테스트는 requirements-sim 및 외부 모델 준비 후 실행
-python -m unittest discover -s so101/tests -v
+python -m unittest discover -s tests -v
 ```
-
-[검증 기록](docs/VALIDATION.md)에는 이번 배포 사본에서 실제로 실행한 검사와 확인 범위를 구분해 기록합니다.
-
-## 기반 프로젝트
-
-로봇 모델은 TheRobotStudio의 SO-ARM100 저장소, MuJoCo, EasyOCR, PyTorch를 사용합니다. SO-ARM100 기준 커밋은 `a758567c3978dfeefe282ede0500085a48fe8f78`입니다. 기준 XML은 해당 모델에 라벨·hood·가림판·카메라를 추가한 수정본입니다. [서드파티 안내](docs/THIRD_PARTY.md)를 참고하세요.

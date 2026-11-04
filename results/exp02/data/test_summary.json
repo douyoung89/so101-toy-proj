@@ -1,9 +1,0 @@
-{
-  "unique": 12,
-  "partial_wrong_memory": 0,
-  "unsolvable": 5,
-  "budget_exhausted": 1,
-  "duplicate_states_collapsed": 7,
-  "complete_correct": 3,
-  "retained_unique_states": 5
-}

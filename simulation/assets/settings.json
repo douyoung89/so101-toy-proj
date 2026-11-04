@@ -1,0 +1,15 @@
+{
+  "reference_joints_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.75,
+    0.0
+  ],
+  "shutter_body_y": -0.006,
+  "thresholds": {
+    "protein_g": 0.7,
+    "sugar_g": 0.5
+  }
+}

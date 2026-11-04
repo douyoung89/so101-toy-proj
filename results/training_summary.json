@@ -1,0 +1,11 @@
+{
+  "seed": 20261104,
+  "train_samples": 81,
+  "val_samples": 14,
+  "selected_epoch": 400,
+  "epochs_run": 400,
+  "best_val_loss": 0.0007063347729854286,
+  "parameters": 2562,
+  "training_seconds": 0.24296574998879805,
+  "selection": "lowest validation loss"
+}

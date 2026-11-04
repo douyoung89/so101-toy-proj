@@ -1,0 +1,9 @@
+{
+  "seed": 20261104,
+  "hidden_dim": 32,
+  "epochs": 400,
+  "patience": 60,
+  "learning_rate": 0.003,
+  "weight_decay": 0.001,
+  "source_data": null
+}

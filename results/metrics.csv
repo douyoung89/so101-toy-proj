@@ -1,0 +1,11 @@
+mode,split,policy,episodes,successes,success_rate,wrong_stops,mean_moves,mean_rotation_deg,budget_exhausted,technical_errors
+live,val,mlp,2,2,1.0,0,3.5,17.499999074842144,0,0
+live,val,left_first,2,0,0.0,0,8.0,39.99999984660418,2,0
+live,val,right_first,2,2,1.0,0,3.5,17.499999074842144,0,0
+live,val,random,2,0,0.0,0,8.0,39.99999880247624,2,0
+live,val,fixed_sweep,2,0,0.0,0,8.0,39.99999984660418,2,0
+live,test,mlp,1,1,1.0,0,3.0,15.000000315239294,0,0
+live,test,left_first,1,0,0.0,0,8.0,39.999996044787785,1,0
+live,test,right_first,1,1,1.0,0,3.0,15.000000315239294,0,0
+live,test,random,1,0,0.0,0,8.0,39.999996956830834,1,0
+live,test,fixed_sweep,1,1,1.0,0,3.0,15.000000315239294,0,0

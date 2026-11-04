@@ -1,0 +1,1020 @@
+{
+  "episode_id": "episode_000024",
+  "scene_id": "scene_000007",
+  "strategy": "shortest",
+  "seed": 1504012364,
+  "start_deg": 15,
+  "stop_reason": "memory_complete",
+  "success": true,
+  "wrong_stop": false,
+  "technical_errors": [],
+  "label_id": "label_025",
+  "observations": [
+    {
+      "step": 0,
+      "image": "data/images/frame_000167.png",
+      "wrist_deg": 15,
+      "relative_actual_deg": 14.999992640994273,
+      "joint_state": {
+        "qpos_rad": [
+          -2.790766627990118e-12,
+          0.0006429500050612754,
+          0.0005480835896293181,
+          0.00017088899362871268,
+          1.0117992593602698,
+          -2.0213912316699026e-06
+        ],
+        "qvel_rad_s": [
+          8.603616329928866e-11,
+          4.014243585732327e-12,
+          -1.1866897006070966e-13,
+          -2.222568836257956e-12,
+          -4.0332734475121045e-09,
+          -1.334718819442367e-13
+        ],
+        "actuator_targets_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0117993877991494,
+          0.0
+        ],
+        "simulation_time_s": 1.8000000000000014
+      },
+      "ocr": [
+        {
+          "text": "5 g",
+          "confidence": 0.4376595102913355,
+          "bbox": [
+            [
+              498.0,
+              370.0
+            ],
+            [
+              528.0,
+              370.0
+            ],
+            [
+              528.0,
+              394.0
+            ],
+            [
+              498.0,
+              394.0
+            ]
+          ]
+        },
+        {
+          "text": "NUTRITION",
+          "confidence": 0.999872879120894,
+          "bbox": [
+            [
+              438.1970684086417,
+              273.1094462711102
+            ],
+            [
+              542.9950198250268,
+              290.82721039471
+            ],
+            [
+              537.8029315913583,
+              314.8905537288898
+            ],
+            [
+              433.0049801749732,
+              297.17278960529
+            ]
+          ]
+        },
+        {
+          "text": "SUGAR",
+          "confidence": 0.9995038638592222,
+          "bbox": [
+            [
+              427.07899166023174,
+              353.14487414671834
+            ],
+            [
+              500.96651032127625,
+              365.55299159542415
+            ],
+            [
+              495.92100833976826,
+              389.85512585328166
+            ],
+            [
+              422.03348967872375,
+              377.44700840457585
+            ]
+          ]
+        }
+      ],
+      "readings": {
+        "protein_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        },
+        "sugar_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        }
+      },
+      "memory": {
+        "decision": "need_more",
+        "fields": {
+          "protein_g": {
+            "value": null,
+            "confidence": null,
+            "status": "unknown",
+            "last_observation": null,
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          },
+          "sugar_g": {
+            "value": null,
+            "confidence": null,
+            "status": "unknown",
+            "last_observation": null,
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          }
+        }
+      },
+      "arrival": {
+        "command_relative_deg": 15,
+        "command_wrist_rad": 1.0117993877991494,
+        "before": {
+          "qpos_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.75,
+            0.0
+          ],
+          "qvel_rad_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.75,
+            0.0
+          ],
+          "simulation_time_s": 0.0
+        },
+        "after": {
+          "qpos_rad": [
+            -2.790766627990118e-12,
+            0.0006429500050612754,
+            0.0005480835896293181,
+            0.00017088899362871268,
+            1.0117992593602698,
+            -2.0213912316699026e-06
+          ],
+          "qvel_rad_s": [
+            8.603616329928866e-11,
+            4.014243585732327e-12,
+            -1.1866897006070966e-13,
+            -2.222568836257956e-12,
+            -4.0332734475121045e-09,
+            -1.334718819442367e-13
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0117993877991494,
+            0.0
+          ],
+          "simulation_time_s": 1.8000000000000014
+        },
+        "actual_relative_deg": 14.999992640994273,
+        "elapsed_s": 1.8000000000000014,
+        "max_error_rad": 0.0006429500050612754,
+        "final_speed_rad_s": 4.0332734475121045e-09,
+        "invalid_reasons": []
+      },
+      "action": "LEFT_5"
+    },
+    {
+      "step": 1,
+      "image": "data/images/frame_000160.png",
+      "wrist_deg": 10,
+      "relative_actual_deg": 9.99999207044413,
+      "joint_state": {
+        "qpos_rad": [
+          1.3046529310524854e-12,
+          0.0006429531463439628,
+          0.0005480867293728239,
+          0.00017089213325929985,
+          0.9245327868025748,
+          -2.2670505216504987e-06
+        ],
+        "qvel_rad_s": [
+          -4.0814252669467544e-11,
+          -1.9328365557659235e-12,
+          3.0111318473516257e-13,
+          1.193304862255618e-12,
+          1.353619060840121e-09,
+          -2.7953958295293013e-14
+        ],
+        "actuator_targets_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.924532925199433,
+          0.0
+        ],
+        "simulation_time_s": 3.599999999999825
+      },
+      "ocr": [
+        {
+          "text": "NUTRITION",
+          "confidence": 0.9999268438946755,
+          "bbox": [
+            [
+              430.0,
+              284.0
+            ],
+            [
+              537.0,
+              284.0
+            ],
+            [
+              537.0,
+              317.0
+            ],
+            [
+              430.0,
+              317.0
+            ]
+          ]
+        },
+        {
+          "text": "5 g",
+          "confidence": 0.6866975426673889,
+          "bbox": [
+            [
+              494.0,
+              376.0
+            ],
+            [
+              528.0,
+              376.0
+            ],
+            [
+              528.0,
+              402.0
+            ],
+            [
+              494.0,
+              402.0
+            ]
+          ]
+        },
+        {
+          "text": "SUGAR",
+          "confidence": 0.9998344112631165,
+          "bbox": [
+            [
+              426.99099080900555,
+              364.1747742652155
+            ],
+            [
+              499.94332565896053,
+              373.41962592640215
+            ],
+            [
+              496.00900919099445,
+              397.8252257347845
+            ],
+            [
+              423.05667434103947,
+              388.58037407359785
+            ]
+          ]
+        }
+      ],
+      "readings": {
+        "protein_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        },
+        "sugar_g": {
+          "value": 5,
+          "confidence": 0.6866975426673889,
+          "ambiguous": false,
+          "candidates": [
+            {
+              "value": 5,
+              "confidence": 0.6866975426673889,
+              "text": "SUGAR 5 g",
+              "boxes": [
+                [
+                  [
+                    426.99099080900555,
+                    364.1747742652155
+                  ],
+                  [
+                    499.94332565896053,
+                    373.41962592640215
+                  ],
+                  [
+                    496.00900919099445,
+                    397.8252257347845
+                  ],
+                  [
+                    423.05667434103947,
+                    388.58037407359785
+                  ]
+                ],
+                [
+                  [
+                    494.0,
+                    376.0
+                  ],
+                  [
+                    528.0,
+                    376.0
+                  ],
+                  [
+                    528.0,
+                    402.0
+                  ],
+                  [
+                    494.0,
+                    402.0
+                  ]
+                ]
+              ]
+            }
+          ]
+        }
+      },
+      "memory": {
+        "decision": "need_more",
+        "fields": {
+          "protein_g": {
+            "value": null,
+            "confidence": null,
+            "status": "unknown",
+            "last_observation": null,
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          },
+          "sugar_g": {
+            "value": 5,
+            "confidence": 0.6866975426673889,
+            "status": "confirmed",
+            "last_observation": {
+              "observation_id": "obs_01",
+              "sequence_index": 1,
+              "value": 5,
+              "confidence": 0.6866975426673889,
+              "ambiguous": false
+            },
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": 5,
+                "confidence": 0.6866975426673889,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          }
+        }
+      },
+      "arrival": {
+        "command_relative_deg": 10,
+        "command_wrist_rad": 0.924532925199433,
+        "before": {
+          "qpos_rad": [
+            -2.790766627990118e-12,
+            0.0006429500050612754,
+            0.0005480835896293181,
+            0.00017088899362871268,
+            1.0117992593602698,
+            -2.0213912316699026e-06
+          ],
+          "qvel_rad_s": [
+            8.603616329928866e-11,
+            4.014243585732327e-12,
+            -1.1866897006070966e-13,
+            -2.222568836257956e-12,
+            -4.0332734475121045e-09,
+            -1.334718819442367e-13
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0117993877991494,
+            0.0
+          ],
+          "simulation_time_s": 1.8000000000000014
+        },
+        "after": {
+          "qpos_rad": [
+            1.3046529310524854e-12,
+            0.0006429531463439628,
+            0.0005480867293728239,
+            0.00017089213325929985,
+            0.9245327868025748,
+            -2.2670505216504987e-06
+          ],
+          "qvel_rad_s": [
+            -4.0814252669467544e-11,
+            -1.9328365557659235e-12,
+            3.0111318473516257e-13,
+            1.193304862255618e-12,
+            1.353619060840121e-09,
+            -2.7953958295293013e-14
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.924532925199433,
+            0.0
+          ],
+          "simulation_time_s": 3.599999999999825
+        },
+        "actual_relative_deg": 9.99999207044413,
+        "elapsed_s": 1.8000000000000014,
+        "max_error_rad": 0.0006429531463439628,
+        "final_speed_rad_s": 1.353619060840121e-09,
+        "invalid_reasons": []
+      },
+      "action": "LEFT_5"
+    },
+    {
+      "step": 2,
+      "image": "data/images/frame_000159.png",
+      "wrist_deg": 5,
+      "relative_actual_deg": 4.99999169151827,
+      "joint_state": {
+        "qpos_rad": [
+          1.4525627921425783e-12,
+          0.0006429562856423299,
+          0.0005480898672899385,
+          0.00017089527109310232,
+          0.8372663175893544,
+          -2.4954542418468902e-06
+        ],
+        "qvel_rad_s": [
+          -4.55184606164408e-11,
+          -2.272855742584313e-12,
+          3.3872710319548933e-13,
+          1.1166399843803034e-12,
+          1.3536214027515799e-09,
+          -2.5006433767636382e-14
+        ],
+        "actuator_targets_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.8372664625997165,
+          0.0
+        ],
+        "simulation_time_s": 5.399999999999627
+      },
+      "ocr": [
+        {
+          "text": "NUTRITION",
+          "confidence": 0.9999357848984561,
+          "bbox": [
+            [
+              429.0,
+              292.0
+            ],
+            [
+              534.0,
+              292.0
+            ],
+            [
+              534.0,
+              322.0
+            ],
+            [
+              429.0,
+              322.0
+            ]
+          ]
+        },
+        {
+          "text": "PROTEIN1A",
+          "confidence": 0.6323127762462915,
+          "bbox": [
+            [
+              417.0,
+              336.0
+            ],
+            [
+              528.0,
+              336.0
+            ],
+            [
+              528.0,
+              360.0
+            ],
+            [
+              417.0,
+              360.0
+            ]
+          ]
+        }
+      ],
+      "readings": {
+        "protein_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        },
+        "sugar_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        }
+      },
+      "memory": {
+        "decision": "need_more",
+        "fields": {
+          "protein_g": {
+            "value": null,
+            "confidence": null,
+            "status": "unknown",
+            "last_observation": null,
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_02",
+                "sequence_index": 2,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          },
+          "sugar_g": {
+            "value": 5,
+            "confidence": 0.6866975426673889,
+            "status": "confirmed",
+            "last_observation": {
+              "observation_id": "obs_01",
+              "sequence_index": 1,
+              "value": 5,
+              "confidence": 0.6866975426673889,
+              "ambiguous": false
+            },
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": 5,
+                "confidence": 0.6866975426673889,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_02",
+                "sequence_index": 2,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          }
+        }
+      },
+      "arrival": {
+        "command_relative_deg": 5,
+        "command_wrist_rad": 0.8372664625997165,
+        "before": {
+          "qpos_rad": [
+            1.3046529310524854e-12,
+            0.0006429531463439628,
+            0.0005480867293728239,
+            0.00017089213325929985,
+            0.9245327868025748,
+            -2.2670505216504987e-06
+          ],
+          "qvel_rad_s": [
+            -4.0814252669467544e-11,
+            -1.9328365557659235e-12,
+            3.0111318473516257e-13,
+            1.193304862255618e-12,
+            1.353619060840121e-09,
+            -2.7953958295293013e-14
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.924532925199433,
+            0.0
+          ],
+          "simulation_time_s": 3.599999999999825
+        },
+        "after": {
+          "qpos_rad": [
+            1.4525627921425783e-12,
+            0.0006429562856423299,
+            0.0005480898672899385,
+            0.00017089527109310232,
+            0.8372663175893544,
+            -2.4954542418468902e-06
+          ],
+          "qvel_rad_s": [
+            -4.55184606164408e-11,
+            -2.272855742584313e-12,
+            3.3872710319548933e-13,
+            1.1166399843803034e-12,
+            1.3536214027515799e-09,
+            -2.5006433767636382e-14
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.8372664625997165,
+            0.0
+          ],
+          "simulation_time_s": 5.399999999999627
+        },
+        "actual_relative_deg": 4.99999169151827,
+        "elapsed_s": 1.8000000000000014,
+        "max_error_rad": 0.0006429562856423299,
+        "final_speed_rad_s": 1.3536214027515799e-09,
+        "invalid_reasons": []
+      },
+      "action": "LEFT_5"
+    },
+    {
+      "step": 3,
+      "image": "data/images/frame_000158.png",
+      "wrist_deg": 0,
+      "relative_actual_deg": -8.49134272279382e-06,
+      "joint_state": {
+        "qpos_rad": [
+          1.5928625856188358e-12,
+          0.0006429594236467927,
+          0.0005480930039135941,
+          0.00017089840763361084,
+          0.7499998517981116,
+          -2.7048641100487084e-06
+        ],
+        "qvel_rad_s": [
+          -4.998476685867749e-11,
+          -2.6200504234128583e-12,
+          3.742563333528369e-13,
+          1.0295086645844997e-12,
+          1.3536297906057372e-09,
+          -2.2076143696111395e-14
+        ],
+        "actuator_targets_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.75,
+          0.0
+        ],
+        "simulation_time_s": 7.199999999999429
+      },
+      "ocr": [
+        {
+          "text": "NUTRITION",
+          "confidence": 0.9999593492191389,
+          "bbox": [
+            [
+              427.0,
+              305.0
+            ],
+            [
+              529.0,
+              305.0
+            ],
+            [
+              529.0,
+              325.0
+            ],
+            [
+              427.0,
+              325.0
+            ]
+          ]
+        },
+        {
+          "text": "PROTEIN 14 g",
+          "confidence": 0.7396118918777078,
+          "bbox": [
+            [
+              414.0,
+              344.0
+            ],
+            [
+              544.0,
+              344.0
+            ],
+            [
+              544.0,
+              370.0
+            ],
+            [
+              414.0,
+              370.0
+            ]
+          ]
+        }
+      ],
+      "readings": {
+        "protein_g": {
+          "value": 14,
+          "confidence": 0.7396118918777078,
+          "ambiguous": false,
+          "candidates": [
+            {
+              "value": 14,
+              "confidence": 0.7396118918777078,
+              "text": "PROTEIN 14 g",
+              "boxes": [
+                [
+                  [
+                    414.0,
+                    344.0
+                  ],
+                  [
+                    544.0,
+                    344.0
+                  ],
+                  [
+                    544.0,
+                    370.0
+                  ],
+                  [
+                    414.0,
+                    370.0
+                  ]
+                ]
+              ]
+            }
+          ]
+        },
+        "sugar_g": {
+          "value": null,
+          "confidence": null,
+          "ambiguous": false,
+          "candidates": []
+        }
+      },
+      "memory": {
+        "decision": "fail",
+        "fields": {
+          "protein_g": {
+            "value": 14,
+            "confidence": 0.7396118918777078,
+            "status": "confirmed",
+            "last_observation": {
+              "observation_id": "obs_03",
+              "sequence_index": 3,
+              "value": 14,
+              "confidence": 0.7396118918777078,
+              "ambiguous": false
+            },
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_02",
+                "sequence_index": 2,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_03",
+                "sequence_index": 3,
+                "value": 14,
+                "confidence": 0.7396118918777078,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          },
+          "sugar_g": {
+            "value": 5,
+            "confidence": 0.6866975426673889,
+            "status": "confirmed",
+            "last_observation": {
+              "observation_id": "obs_01",
+              "sequence_index": 1,
+              "value": 5,
+              "confidence": 0.6866975426673889,
+              "ambiguous": false
+            },
+            "evidence": [
+              {
+                "observation_id": "obs_00",
+                "sequence_index": 0,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_01",
+                "sequence_index": 1,
+                "value": 5,
+                "confidence": 0.6866975426673889,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_02",
+                "sequence_index": 2,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              },
+              {
+                "observation_id": "obs_03",
+                "sequence_index": 3,
+                "value": null,
+                "confidence": null,
+                "ambiguous": false
+              }
+            ],
+            "pending": null,
+            "pending_count": 0
+          }
+        }
+      },
+      "arrival": {
+        "command_relative_deg": 0,
+        "command_wrist_rad": 0.75,
+        "before": {
+          "qpos_rad": [
+            1.4525627921425783e-12,
+            0.0006429562856423299,
+            0.0005480898672899385,
+            0.00017089527109310232,
+            0.8372663175893544,
+            -2.4954542418468902e-06
+          ],
+          "qvel_rad_s": [
+            -4.55184606164408e-11,
+            -2.272855742584313e-12,
+            3.3872710319548933e-13,
+            1.1166399843803034e-12,
+            1.3536214027515799e-09,
+            -2.5006433767636382e-14
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.8372664625997165,
+            0.0
+          ],
+          "simulation_time_s": 5.399999999999627
+        },
+        "after": {
+          "qpos_rad": [
+            1.5928625856188358e-12,
+            0.0006429594236467927,
+            0.0005480930039135941,
+            0.00017089840763361084,
+            0.7499998517981116,
+            -2.7048641100487084e-06
+          ],
+          "qvel_rad_s": [
+            -4.998476685867749e-11,
+            -2.6200504234128583e-12,
+            3.742563333528369e-13,
+            1.0295086645844997e-12,
+            1.3536297906057372e-09,
+            -2.2076143696111395e-14
+          ],
+          "actuator_targets_rad": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.75,
+            0.0
+          ],
+          "simulation_time_s": 7.199999999999429
+        },
+        "actual_relative_deg": -8.49134272279382e-06,
+        "elapsed_s": 1.8000000000000014,
+        "max_error_rad": 0.0006429594236467927,
+        "final_speed_rad_s": 1.3536297906057372e-09,
+        "invalid_reasons": []
+      },
+      "action": "STOP"
+    }
+  ]
+}

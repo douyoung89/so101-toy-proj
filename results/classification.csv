@@ -1,0 +1,4 @@
+split,samples,accuracy,loss,left_targets,right_targets,always_right_accuracy
+train,81,1.0,0.00021361939434427768,48,33,0.40740740299224854
+val,14,1.0,0.0007063347729854286,0,14,1.0
+test,5,1.0,0.05275658518075943,0,5,1.0
