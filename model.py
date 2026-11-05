@@ -10,7 +10,9 @@ class DirectionModel(nn.Module):
         super().__init__()
         self.register_buffer('mean', torch.zeros(INPUT_DIM))
         self.register_buffer('scale', torch.ones(INPUT_DIM))
-        self.layers = nn.Sequential(nn.Linear(INPUT_DIM, hidden_dim), nn.ReLU(), nn.Linear(hidden_dim, 2))
+        self.layers = nn.Sequential(nn.Linear(INPUT_DIM, hidden_dim), 
+                                    nn.ReLU(), 
+                                    nn.Linear(hidden_dim, 2))
 
     def forward(self, x, legal):
         scores = self.layers((x - self.mean) / self.scale)

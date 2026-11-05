@@ -50,6 +50,11 @@ def train(data_dir, results_dir, config):
     for epoch in range(1, config['epochs'] + 1):
         model.train()
         for x, target, legal in loader:
+            # x : o_t, history until t , target : a_t, action right after o_t 
+            # o_t -> a_t -> o_t+1 -> a_t+1 ... 
+
+            # x : (B,77)
+            # target : (B, 2)
             optimizer.zero_grad(set_to_none=True)
             loss = soft_cross_entropy(model(x, legal), target)
             loss.backward()
@@ -74,10 +79,15 @@ def train(data_dir, results_dir, config):
         writer = csv.DictWriter(stream, fieldnames=history[0].keys(), lineterminator='\n')
         writer.writeheader()
         writer.writerows(history)
-    summary = {'seed': config['seed'], 'train_samples': len(train_data), 'val_samples': len(val_data),
-               'selected_epoch': best_epoch, 'epochs_run': len(history), 'best_val_loss': best_loss,
+    summary = {'seed': config['seed'], 
+               'train_samples': len(train_data), 
+               'val_samples': len(val_data),
+               'selected_epoch': best_epoch, 
+               'epochs_run': len(history), 
+               'best_val_loss': best_loss,
                'parameters': sum(p.numel() for p in model.parameters()),
-               'training_seconds': time.perf_counter() - started, 'selection': 'lowest validation loss'}
+               'training_seconds': time.perf_counter() - started, 
+               'selection': 'lowest validation loss'} 
     (results_dir / 'training_summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     print(f'Saved {results_dir / "best_model.pt"} (epoch {best_epoch})', flush=True)
 

@@ -51,11 +51,12 @@ class ReplayEnvironment:
 
 
 def run_episode(scene, method, model, mode, seed, on_frame=None):
-    if mode == 'live':
+    if mode == 'live': # using mujoco simulation 
         from simulation.environment import RobotEnvironment
         environment = RobotEnvironment(scene)
-    else:
+    else: # replay 
         environment = ReplayEnvironment(scene)
+    
     memory = InformationMemory()
     observations, actions, errors = [], [], []
     angle = scene['start_deg']
@@ -79,6 +80,8 @@ def run_episode(scene, method, model, mode, seed, on_frame=None):
                 break
             if len(actions) == MAX_MOVES:
                 break
+            
+            # method 
             if method == 'mlp':
                 action = predict_action(model, observations, actions)
             else:
