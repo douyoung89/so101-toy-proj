@@ -51,6 +51,14 @@ class ReplayEnvironment:
 
 
 def run_episode(scene, method, model, mode, seed, on_frame=None):
+    """
+    scene (dict): Settings and data for the scene to run.
+    method (str): Policy used to choose the next action. (mlp)
+    model (torch.nn.Module | None): Trained model used by the MLP policy.
+    mode (str): Evaluation environment, either 'live' or 'replay'.
+    seed (int): Random seed for reproducible action selection.
+    on_frame (callable | None): Optional function called with rendered frames.
+    """
     if mode == 'live': # using mujoco simulation 
         from simulation.environment import RobotEnvironment
         environment = RobotEnvironment(scene)
@@ -65,16 +73,18 @@ def run_episode(scene, method, model, mode, seed, on_frame=None):
     reason = 'budget_exhausted'
     try:
         arrival = environment.move(angle, on_frame)
+        
         for step in range(MAX_MOVES + 1):
             observation = environment.capture()
             observation.update(step=step, wrist_deg=angle, action=None)
-            observation['memory'] = memory.observe(f'obs_{step}', step, observation['readings'])
+            observation['memory'] = memory.observe(f'obs_{step}', step, observation['readings']) # cumulate memory, observation['readings'] = current observation 
             observations.append(observation)
             errors.extend(arrival['invalid_reasons'])
             if errors:
                 reason = 'technical_error'
                 break
             if memory_complete(observation['memory']):
+                # if status is confirmed, then stop the action 
                 observation['action'] = 'STOP'
                 reason = 'memory_complete'
                 break
@@ -86,11 +96,13 @@ def run_episode(scene, method, model, mode, seed, on_frame=None):
                 action = predict_action(model, observations, actions)
             else:
                 action = rule_action(method, angle, actions, rng, scene['start_deg'])
+            
             target = angle + DELTAS[ACTIONS.index(action)]
             observation['action'] = action
             if target not in scene['safe_angles']:
                 reason = 'unsafe_action_rejected'
                 break
+            
             arrival = environment.move(target, on_frame)
             rotation += abs(arrival['after']['qpos_rad'][4] - arrival['before']['qpos_rad'][4]) * 180 / math.pi
             actions.append(action)
